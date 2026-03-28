@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test App</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🚀 Hackathon Test App</h1>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <br><br>
+
+    <button onclick="showMessage()">Submit</button>
+
+    <div id="output"></div>
+
+    <script>
+        function showMessage() {
+            let name = document.getElementById("name").value;
+
+            if (name === "") {
+                document.getElementById("output").innerHTML = "Please enter your name!";
+            } else {
+                document.getElementById("output").innerHTML = "Hello " + name + " 🎉 Your setup works!";
+            }
+        }
+    </script>
+
+</body>
+</html>
